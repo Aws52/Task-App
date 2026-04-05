@@ -1,4 +1,4 @@
-package com.aws.task.domain.enitiy;
+package com.aws.task.domain.entity;
 
 // TaskPriority enum to model task priority (HIGH, MEDIUM, LOW)
 public enum TaskPriority {

@@ -1,7 +1,7 @@
 package com.aws.task.service;
 
 import com.aws.task.domain.CreateTaskRequest;
-import com.aws.task.domain.enitiy.Task;
+import com.aws.task.domain.entity.Task;
 
 public interface TaskService {
 

@@ -5,8 +5,8 @@ import java.time.Instant;
 import org.springframework.stereotype.Service;
 
 import com.aws.task.domain.CreateTaskRequest;
-import com.aws.task.domain.enitiy.Task;
-import com.aws.task.domain.enitiy.TaskStatus;
+import com.aws.task.domain.entity.Task;
+import com.aws.task.domain.entity.TaskStatus;
 import com.aws.task.repository.TaskRepository;
 import com.aws.task.service.TaskService;
 

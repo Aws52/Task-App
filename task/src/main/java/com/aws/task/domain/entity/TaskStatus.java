@@ -1,4 +1,4 @@
-package com.aws.task.domain.enitiy;
+package com.aws.task.domain.entity;
 
 // TaskStatus enum to model task status (OPEN, COMPLETE)
 public enum TaskStatus {

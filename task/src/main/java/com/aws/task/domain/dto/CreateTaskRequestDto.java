@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import org.hibernate.validator.constraints.Length;
 
-import com.aws.task.domain.enitiy.TaskPriority;
+import com.aws.task.domain.entity.TaskPriority;
 
 import jakarta.annotation.Nullable;
 import jakarta.validation.constraints.FutureOrPresent;

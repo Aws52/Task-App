@@ -1,4 +1,4 @@
-package com.aws.task.domain.enitiy;
+package com.aws.task.domain.entity;
 
 import java.time.Instant;
 import java.time.LocalDate;
