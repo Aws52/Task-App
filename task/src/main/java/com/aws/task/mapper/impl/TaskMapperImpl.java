@@ -1,11 +1,14 @@
 package com.aws.task.mapper.impl;
 
+import org.springframework.stereotype.Component;
+
 import com.aws.task.domain.CreateTaskRequest;
 import com.aws.task.domain.dto.CreateTaskRequestDto;
 import com.aws.task.domain.dto.TaskDto;
 import com.aws.task.domain.enitiy.Task;
 import com.aws.task.mapper.TaskMapper;
 
+@Component
 public class TaskMapperImpl implements TaskMapper {
 
     @Override
