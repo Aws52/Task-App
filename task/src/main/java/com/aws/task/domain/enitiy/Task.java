@@ -18,6 +18,9 @@ import jakarta.persistence.Table;
 @Table(name = "tasks") //annotation to specify the table name in the database (tasks)
 public class Task {
 
+    public Task() {
+    }
+    
     public Task(UUID id, String title, String description, LocalDate dueDate, TaskStatus status, TaskPriority priority,
             Instant created, Instant updated) {
         this.id = id;
