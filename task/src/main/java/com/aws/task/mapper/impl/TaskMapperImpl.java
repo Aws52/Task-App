@@ -20,9 +20,6 @@ public class TaskMapperImpl implements TaskMapper {
 
     @Override
     public TaskDto toDto(Task task) {
-        if (task == null) {
-            return null;
-        }
         return new TaskDto(
             task.getId(),
             task.getTitle(),
