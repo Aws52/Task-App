@@ -18,6 +18,18 @@ import jakarta.persistence.Table;
 @Table(name = "tasks") //annotation to specify the table name in the database (tasks)
 public class Task {
 
+    public Task(UUID id, String title, String description, LocalDate dueDate, TaskStatus status, TaskPriority priority,
+            Instant created, Instant updated) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.status = status;
+        this.priority = priority;
+        this.created = created;
+        this.updated = updated;
+    }
+
     @Id //annotation to mark this field as the primary key of the entity
     @GeneratedValue(strategy = GenerationType.UUID) //annotation to specify that the value of this field should be generated automatically (UUID)
     @Column(name = "id", updatable = false, nullable = false) //annotation to specify the column name in the database and constraints (not updatable, not nullable)
