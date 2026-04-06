@@ -1,5 +1,7 @@
 package com.aws.task.controller;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +16,8 @@ import com.aws.task.mapper.TaskMapper;
 import com.aws.task.service.TaskService;
 
 import jakarta.validation.Valid;
+
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
@@ -40,4 +44,10 @@ public class TaskController {
         return new ResponseEntity<>(createdTaskDto, HttpStatus.CREATED);
     }
     
+    @GetMapping
+    public ResponseEntity<List<TaskDto>> listTasks() {
+        List<Task> tasks = taskService.listTasks();
+        List<TaskDto> taskDtos = tasks.stream().map(taskMapper::toDto).toList();
+        return ResponseEntity.ok(taskDtos);
+    }
 }
