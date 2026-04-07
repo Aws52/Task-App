@@ -3,8 +3,10 @@ package com.aws.task.mapper.impl;
 import org.springframework.stereotype.Component;
 
 import com.aws.task.domain.CreateTaskRequest;
+import com.aws.task.domain.UpdateTaskRequest;
 import com.aws.task.domain.dto.CreateTaskRequestDto;
 import com.aws.task.domain.dto.TaskDto;
+import com.aws.task.domain.dto.UpdateTaskRequestDto;
 import com.aws.task.domain.entity.Task;
 import com.aws.task.mapper.TaskMapper;
 
@@ -30,6 +32,17 @@ public class TaskMapperImpl implements TaskMapper {
             task.getDueDate(),
             task.getPriority(),
             task.getStatus()
+        );
+    }
+
+    @Override
+    public UpdateTaskRequest fromDto(UpdateTaskRequestDto dto) {
+        return new UpdateTaskRequest(
+            dto.title(),
+            dto.description(),
+            dto.dueDate(),
+            dto.status(),
+            dto.priority()
         );
     }
 
